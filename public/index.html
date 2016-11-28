@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js">
+    </script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
+    </script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js">
+    </script>
+    <script src="http://code.angularjs.org/1.5.5/angular-animate.min.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js">
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js">
+    </script>
+
+    <script src="app.js">
+    </script>
+    <script src="controllers/contactsController.js">
+    </script>
+    <script src="controllers/groupsController.js">
+    </script>
+
+    <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js">
+    </script><!-- Tether for Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous">
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/contacts.css">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+    <style>
+    </style>
+  </head>
+  <body ng-app="contactApp" >
+    <div class="row nav__div">
+      <a href="#/contacts/add" class="btn btn-success btn-lg">Add Contact</a>
+      <div class="nav__arr col-sm-4 col-md-4 col-lg-4">
+        <i class="fa fa-arrow-left fa-5" aria-hidden="true"></i>
+        <h3>prev page</h3>
+      </div>
+      <div class="nav__arr col-sm-4 col-md-4 col-lg-4">
+        <h3>next page</h3>
+        <i class="fa fa-arrow-right fa-5" aria-hidden="true"></i>    
+      </div>
+    </div>
+    <div class="card-deck-wrapper" ng-controller="contactsController">
+      <div ng-view></div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+

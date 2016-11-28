@@ -1,0 +1,21 @@
+{
+  "name": "invonto",
+  "version": "1.0.0",
+  "description": "contacts app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies":{
+    "express":"*",
+    "querystring":"*",
+    "cookie-paerser":"*",
+    "body-parser":"*",
+    "mongoose":"*",
+    "request":"*",
+    "ejs":"*  ",
+    "nodemon":"*"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html ng-app="personalSite">
+  <head>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js"></script>
+    <script src="http://code.angularjs.org/1.5.5/angular-animate.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/ui-lightness/jquery-ui.css" type="text/css" media="all" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="/">
+
+  <style>
+  .contact__card {
+    padding-top: 10px;
+    margin: 2% 3%;
+    padding-bottom: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    font-size: .9em;
+  }
+
+  .contact__card > a.btn {
+    margin: 2% 7%;
+  }
+  h6 {
+    margin-bottom: 2px;
+  }
+  .btn {
+    font-size: .8rem;
+    margin: 3% 14%; 
+  }
+  img {
+    width: 70%;
+  }
+
+  </style>
+
+  </head>
+  <body>
+    <div class="card-deck-wrapper">
+      <div class="card-deck">
+        <div class="col-lg-5 col-xs-10 card card-block card-outline-secondary contact__card">
+          <div class="col-lg-5">
+            <img class="card-img-left" src="http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwMDU4NTc3NDIy.jpg" alt="Card image cap">
+            <br>
+            <span class="tag tag-primary">Test </span> 
+            <span class="tag tag-primary">Food </span> 
+            <span class="tag tag-primary">Work </span> 
+            <br>
+            <span class="tag tag-primary">School </span> 
+            <span class="tag tag-primary">Church</span> 
+            <span class="tag tag-primary">Football </span> 
+            <br>
+          </div>
+          <div class="col-lg-7 text-xs-left">
+            <h3 class="card-title">Swapnil Kasliwal</h3>
+            <span class="tag tag-primary">DOB </span> 
+            <h6>11/21/1990 </h6>
+            <span class="tag tag-success">Phone</span> 
+            <h6>914-787-9208 </h6>
+            <span class="tag tag-info">Email</span> 
+            <h6>skasliwal12@gmail.com </h6>
+          </div>
+          <div class="col-lg-12 text-xs-left">
+            <a href="#" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>          
+          </div>        
+        </div>
+        <div class="col-lg-5 col-xs-10 card card-block card-outline-secondary contact__card">
+          <div class="col-lg-5">
+            <img class="card-img-left" src="http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwMDU4NTc3NDIy.jpg" alt="Card image cap">
+            <br>
+            <span class="tag tag-primary">Family </span> 
+            <span class="tag tag-primary">Friends </span> 
+            <span class="tag tag-primary">Work </span> 
+            <br>
+            <span class="tag tag-primary">School </span> 
+            <span class="tag tag-primary">Church</span> 
+            <span class="tag tag-primary">Football </span> 
+            <br>
+          </div>
+          <div class="col-lg-7 text-xs-left">
+            <h3 class="card-title">Swapnil Kasliwal</h3>
+            <span class="tag tag-primary">DOB </span> 
+            <h6>11/21/1990 </h6>
+            <span class="tag tag-success">Phone</span> 
+            <h6>914-787-9208 </h6>
+            <span class="tag tag-info">Email</span> 
+            <h6>skasliwal12@gmail.com </h6>
+          </div>
+          <div class="col-lg-12 text-xs-left">
+            <a href="#" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>          
+          </div>        
+        </div>
+        <div class="col-lg-5 col-xs-10 card card-block card-outline-secondary contact__card">
+          <div class="col-lg-5">
+            <img class="card-img-left" src="http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwMDU4NTc3NDIy.jpg" alt="Card image cap">
+            <br>
+            <span class="tag tag-primary">Family </span> 
+            <span class="tag tag-primary">Work </span> 
+            <span class="tag tag-primary">School </span>
+            <br> 
+            <span class="tag tag-primary">Church</span> 
+            <br>
+          </div>
+          <div class="col-lg-7 text-xs-left">
+            <h3 class="card-title">Swapnil Kasliwal</h3>
+            <span class="tag tag-primary">DOB </span> 
+            <h6>11/21/1990 </h6>
+            <span class="tag tag-success">Phone</span> 
+            <h6>914-787-9208 </h6>
+            <span class="tag tag-info">Email</span> 
+            <h6>skasliwal12@gmail.com </h6>
+          </div>
+          <div class="col-lg-12 text-xs-left">
+            <a href="#" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>          
+          </div>        
+        </div>
+        <div class="col-lg-5 col-xs-10 card card-block card-outline-secondary contact__card">
+          <div class="col-lg-5">
+            <img class="card-img-left" src="http://a4.files.biography.com/image/upload/c_fill,cs_srgb,dpr_1.0,g_face,h_300,q_80,w_300/MTE4MDAzNDEwMDU4NTc3NDIy.jpg" alt="Card image cap">
+            <br>
+            <span class="tag tag-primary">Family </span> 
+            <span class="tag tag-primary">Friends </span> 
+            <span class="tag tag-primary">Church</span>
+            <br> 
+            <span class="tag tag-primary">Football </span> 
+            <br>
+          </div>
+          <div class="col-lg-7 text-xs-left">
+            <h3 class="card-title">Swapnil Kasliwal</h3>
+            <span class="tag tag-primary">DOB </span> 
+            <h6>11/21/1990 </h6>
+            <span class="tag tag-success">Phone</span> 
+            <h6>914-787-9208 </h6>
+            <span class="tag tag-info">Email</span> 
+            <h6>skasliwal12@gmail.com </h6>
+          </div>
+          <div class="col-lg-12 text-xs-left">
+            <a href="#" class="btn btn-success">Edit</a>
+            <a href="#" class="btn btn-danger">Delete</a>          
+          </div>        
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+
+
+
+
+

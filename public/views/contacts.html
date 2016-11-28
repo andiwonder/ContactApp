@@ -1,0 +1,24 @@
+<div class="card-deck">
+  <div  ng-repeat="contact in contacts" class="col-lg-5 col-md-5 col-sm-8 col-xs-10 card card-block card-outline-secondary contact__card">
+    <div class="col-lg-5">
+      <img class="card-img-left" ng-src="{{contact.img_url}}" alt="Card image cap">
+      <br>
+      <span class="tag tag-primary">Test </span> 
+      <span class="tag tag-primary">Food </span> 
+      <span class="tag tag-primary">Work </span> 
+    </div>
+    <div class="col-lg-7 text-xs-left">
+      <h3 class="card-title"> {{ contact.first_name }} {{ contact.last_name }} </h3>
+      <span class="tag tag-primary"> DOB </span> 
+      <h6> {{ contact.dob }} </h6>
+      <span class="tag tag-success">Phone</span> 
+      <h6> {{ contact.phone }}</h6>
+      <span class="tag tag-info">Email</span> 
+      <h6> {{ contact.email }} </h6>
+    </div>
+    <div class="col-lg-12 text-xs-left">
+      <a ng-click="getContact(contact._id)" class="btn btn-success">Edit</a>
+      <a href="#" class="btn btn-danger" ng-click="removeContact(contact._id)">Delete</a>          
+    </div>        
+  </div>
+</div>

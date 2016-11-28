@@ -1,0 +1,75 @@
+body {
+  background-color: lightskyblue;
+}
+
+.contact__card {
+  padding-top: 10px;
+  margin: 3.25% 2.75%;
+  padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: .9em;
+  background-color: white;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.contact__card > a.btn {
+  margin: 2% 7%;
+}
+.contact__card h6 {
+  margin-bottom: 2px;
+}
+.contact__card .btn {
+  font-size: .8rem;
+  margin: 3% 14%; 
+}
+.contact__card img {
+  width: 70%;
+}
+
+.contacts__add__form {
+  margin: 5% auto !important;
+  background-color: white;
+  color: black;
+  width: 50%;
+  margin: 0 auto;
+  font-family: sans-serif;
+  padding: 2% 3%;
+  /*background-color: lightskyblue;*/
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  font-size: 12px;
+  line-height: 2;
+}
+
+.contacts__add__form label {
+  /*font-weight: 700;*/
+}
+
+.contacts__add__form input {
+  color: black;
+  font-weight: bold;
+  background-url: http://api.thumbr.it/whitenoise-361x370.png?background=4ea6caff&noise=626262&density=15&opacity=15;
+  line-height: 1;
+  height: 20px;
+  margin-bottom: 15px;
+  padding: 0;
+  outline: none;
+  border-bottom: 1px solid #e1e1e1;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.cancel__modal .modal-header{
+  border: none;
+}
+
+.cancel__modal .modal-footer{
+  border: none;
+}
