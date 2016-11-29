@@ -59,6 +59,8 @@ app.post('/api/contacts', function(req, res){
   var contact = req.body;
   console.log("post request made");
   // console.log(req.headers);
+  req.body['groups'] = req.body['groups[]']
+  delete req.body['groups[]'];
   console.log(req.body);
   Contact.addContact(contact, function(err, contact){
     if(err){
@@ -71,8 +73,8 @@ app.post('/api/contacts', function(req, res){
 app.put('/api/contacts/:id', function(req, res){
   var id = req.params.id;
   var contact = req.body;
-  // console.log("put request made with id " + id);
-  // console.log(req.body);
+  req.body['groups'] = req.body['groups[]']
+  delete req.body['groups[]'];
   Contact.updateContact(id, contact, {}, function(err, contact){
     if(err){ throw err; }
     // console.log("put request made callback");

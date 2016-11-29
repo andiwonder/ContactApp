@@ -41,13 +41,18 @@
     <div class="row">
       <div class="form-group col-lg-12">
         <label>Genre</label>
-        <select ng-model="contact.groups" class="form-control">
+        <select id="editcontact_form_select" ng-model="edit_contact_groups" class="form-control" ng-change="editContactGroupAdd(contact , group)">
           <option value="Family">Family</option>
           <option value="Friends">Friends</option>
           <option value="Work">Work</option>
           <option value="School">School</option>
           <option value="Other">Other</option>
         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-12">
+        <li class="add_contact_group_display" ng-repeat="group in contact.groups">{{ group }} <button type="button" class="btn btn-danger btn-xs" ng-click="editremoveGroup(contact, group)">remove</button></li>
       </div>
     </div>
     <div class="row">

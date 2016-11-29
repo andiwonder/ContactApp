@@ -16,11 +16,9 @@ var contactSchema = mongoose.Schema({
   },
   phone : {
     type : String,
-    required : true
   },
   dob : {
     type : String,
-    required : true
   },
   img_url : {
     type : String
@@ -46,6 +44,7 @@ module.exports.getContact = function(id, callback){
 
 
 module.exports.addContact = function(contact, callback){
+  
   Contact.create(contact, callback);
 }
 
@@ -58,7 +57,8 @@ module.exports.updateContact = function(id, contact, options, callback){
     dob: contact.dob,
     phone: contact.phone,
     img_url: contact.img_url,
-    comment : contact.comment
+    comment : contact.comment,
+    groups : contact.groups
   }
   // console.log("UPDATED NEW SHIT IS");
   // console.log(update);

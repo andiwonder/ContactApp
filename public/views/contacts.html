@@ -14,9 +14,10 @@
     <div class="col-lg-5">
       <img class="card-img-left" ng-src="{{contact.img_url}}" alt="Card image cap">
       <br>
-      <span class="tag tag-primary">Test </span> 
-      <span class="tag tag-primary">Food </span> 
-      <span class="tag tag-primary">Work </span> 
+      <div class="group_display_div">
+        <button type="button" ng-repeat="group in contact.groups" class="btn btn-default group_display_btn">{{ group }}</button>  
+      </div>
+      
     </div>
     <div class="col-lg-7 text-xs-left">
       <h3 class="card-title"> {{ contact.first_name }} {{ contact.last_name }} </h3>

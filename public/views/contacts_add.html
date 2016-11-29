@@ -45,7 +45,7 @@
     <div class="row">
       <div class="form-group col-lg-12">
         <label>Genre</label>
-        <select id="addcontact_form_select" ng-model="contact.groups" class="form-control" ng-change="addGroup()">
+        <select id="addcontact_form_select" ng-model="contact.groups" class="form-control" ng-change="addGroup(group)">
           <option value="Family">Family</option>
           <option value="Friends">Friends</option>
           <option value="Work">Work</option>
@@ -56,9 +56,7 @@
     </div>
     <div class="row">
       <div class="form-group col-lg-12">
-        
         <li class="add_contact_group_display" ng-repeat="group in selected_groups">{{ group }} <button type="button" class="btn btn-danger btn-xs" ng-click="removeGroup(group)">remove</button></li>
-
       </div>
     </div>
     <div class="row">

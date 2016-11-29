@@ -4,8 +4,11 @@ app.controller('contactsController',
   $scope.currentPage = 1;
   $scope.del_modal_id;
   $scope.add_contact_groups = [];
+  $scope.edit_contact_groups = [];
   var new_groups = [];
+  var new_edit_groups = [];
   $scope.selected_groups = [];
+  $scope.selected_edit_groups = [];
   $scope.ph_numbr = /^(\+?(\d{1}|\d{2}|\d{3})[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{4}$/;
   $scope.groups = ["family","friends","work","school","church"];
   var removeValue = function(array, id) {
@@ -19,7 +22,28 @@ app.controller('contactsController',
   }
 
   $scope.removeGroup = function(group){
-    
+    new_groups = removeValue(new_groups,group);
+    $scope.selected_groups = new_groups;
+  }
+
+  $scope.editremoveGroup = function(contact, group){
+    contact.groups = removeValue(contact.groups,group);
+  }
+
+  $scope.addGroup = function (){
+    new_groups.push($( "#addcontact_form_select option:selected" ).text());
+    $scope.selected_groups = new_groups
+    console.log($scope.selected_groups);
+  }
+
+
+  $scope.editContactGroupAdd = function(contact){
+    new_edit_groups = contact.groups;
+    var new_val = $( "#editcontact_form_select option:selected" ).text();
+    if (new_edit_groups.indexOf(new_val) == -1) {
+      new_edit_groups.push(new_val);
+      contact.groups = new_edit_groups;  
+    }
   }
 
   $scope.del_id = function(contact_id){
@@ -32,12 +56,6 @@ app.controller('contactsController',
     $('.modal-backdrop').remove();
     window.location.href='#/';
   };
-
-  $scope.addGroup = function (){
-    new_groups.push($( "#addcontact_form_select option:selected" ).text());
-    $scope.selected_groups = new_groups
-    console.log($scope.selected_groups);
-  }
 
   $scope.getContacts = function(){
     $http.get('/api/contacts').success(function(response){
@@ -54,6 +72,9 @@ app.controller('contactsController',
 
 
   $scope.addContact = function( contact){
+    new_groups = [];
+    contact.groups = $scope.selected_groups;
+    console.log($.param(contact));
     $http({
       url: '/api/contacts/', method: "POST", data: $.param(contact),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -63,6 +84,7 @@ app.controller('contactsController',
     $scope.contacts.push(contact);
     window.location.href='#/';
   };
+
 
   $scope.updateContact = function(){
     var id = $routeParams.id;
