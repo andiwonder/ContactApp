@@ -9,12 +9,38 @@ body {
 
 .group_display_btn {
   display: inline-block;
-  margin: 0 !important;
 }
 
-.group_display_div{
-  margin-top: 5%;
+.group-nav-div{
+
 }
+
+@media screen and (min-width: 768px) {
+  .group-nav-div{
+    margin: 4% 0 0 0;    
+  }
+}
+
+.group-div{
+  padding: 0;
+}
+
+.card-title {
+
+}
+
+
+@media screen and (max-width: 768px) {
+  .card-title {
+    padding-left: 15px;
+  }
+  .group-div {
+    margin: 4% 0;
+  }
+}
+
+
+
 
 .nav__div{
   margin: 2% 0 2% 3%;
@@ -64,13 +90,22 @@ body {
 }
 .contact__card h6 {
   margin-bottom: 2px;
+  margin-top: 0;
 }
 .contact__card .btn {
   font-size: .8rem;
-  margin: 3% 14%; 
+  margin: 0% 1%;
+}
+.contact__card .edit-btn {
+  margin: 0;
+  font-size: 1em;
+}
+.contact__card .del-btn {
+  margin: 0;
+  font-size: 1em;
 }
 .contact__card img {
-  width: 70%;
+  max-width: 60%;
 }
 
 .contacts__add__form {
