@@ -1,5 +1,16 @@
+<div class="container">
+  <div class="row pagination">
+    <div class="col-lg-8">
+      <ul uib-pagination direction-links="true" total-items="contacts.length" ng-model="currentPage"  items-per-page="pageSize"></ul>
+    </div>
+    <div class="col-lg-4">
+      <a href="#/contacts/add" class="btn btn-success btn-lg add_contact_btn">Add Contact</a>    
+    </div>
+  </div>
+</div>
 <div class="card-deck">
-  <div  ng-repeat="contact in contacts" class="col-lg-5 col-md-5 col-sm-8 col-xs-10 card card-block card-outline-secondary contact__card">
+  <div  ng-repeat="contact in contacts | startFrom:(currentPage - 1 ) * pageSize | limitTo: pageSize" 
+  class="col-lg-5 col-md-5 col-sm-8 col-xs-10 card card-block card-outline-secondary contact__card">
     <div class="col-lg-5">
       <img class="card-img-left" ng-src="{{contact.img_url}}" alt="Card image cap">
       <br>
@@ -16,9 +27,28 @@
       <span class="tag tag-info">Email</span> 
       <h6> {{ contact.email }} </h6>
     </div>
+    <div class="col-lg-12 text-xs-left contact_comment" ng-show="contact.comment != null">
+      <p> {{contact.comment }} </p>
+    </div>
     <div class="col-lg-12 text-xs-left">
       <a ng-click="getContact(contact._id)" class="btn btn-success">Edit</a>
-      <a href="#" class="btn btn-danger" ng-click="removeContact(contact._id)">Delete</a>          
+      <a data-toggle="modal" data-target="#del_Modal" class="btn btn-danger" ng-click="del_id(contact._id)" >Delete</a>
     </div>        
+  </div>
+</div>
+<div id="del_Modal" class="modal fade delete__modal" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Are you sure you want to Delete ? </h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" ng-click="removeContact($scope.del_modal_id)">Yes</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+      </div>
+    </div>
+
   </div>
 </div>

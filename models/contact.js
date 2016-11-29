@@ -23,7 +23,10 @@ var contactSchema = mongoose.Schema({
     required : true
   },
   img_url : {
-    type : String,
+    type : String
+  },
+  comment : {
+    type : String
   }
 });
 
@@ -51,7 +54,8 @@ module.exports.updateContact = function(id, contact, options, callback){
     email: contact.email,
     dob: contact.dob,
     phone: contact.phone,
-    img_url: contact.img_url
+    img_url: contact.img_url,
+    comment : contact.comment
   }
   // console.log("UPDATED NEW SHIT IS");
   // console.log(update);

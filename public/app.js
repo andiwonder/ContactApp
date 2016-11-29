@@ -2,7 +2,7 @@
 // http://stackoverflow.com/questions/10816073/how-to-do-paging-in-angularjs
 
 
-var app = angular.module('contactApp',['ngRoute']);
+var app = angular.module('contactApp',['ui.bootstrap','ngRoute']);
 
 app.config(function ($routeProvider, $locationProvider){
   $routeProvider
@@ -12,5 +12,10 @@ app.config(function ($routeProvider, $locationProvider){
   // .otherwise({ redirectTo : '/'});
 
   // $locationProvider.html5Mode(true);
+})
+.filter('startFrom', function(){
+  return function(data, start){
+    return data.slice(start)
+  }
 });
 

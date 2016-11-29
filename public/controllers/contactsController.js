@@ -1,12 +1,24 @@
 app.controller('contactsController',
   ['$scope', '$http' , '$location', '$routeParams' , function($scope, $http , $location, $routeParams){
- 
+  $scope.pageSize = 4;
+  $scope.currentPage = 1;
+  $scope.del_modal_id;
+  $scope.add_contact_groups = [];
+
+  $scope.del_id = function(contact_id){
+    $scope.del_modal_id = contact_id;
+  };
+
   $scope.go = function ( ) {
     $('#myModal').modal('hide');
     $('body').removeClass('modal-open');
     $('.modal-backdrop').remove();
     window.location.href='#/';
   };
+
+  $scope.addGroup = function (){
+    
+  }
 
   $scope.getContacts = function(){
     $http.get('/api/contacts').success(function(response){
@@ -23,6 +35,7 @@ app.controller('contactsController',
 
 
   $scope.addContact = function( contact){
+    debugger;
     $http({
       url: '/api/contacts/', method: "POST", data: $.param(contact),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
@@ -49,11 +62,15 @@ app.controller('contactsController',
     // console.log($scope.contacts);
   }
 
-  $scope.removeContact = function(id){
-    $http.delete('/api/contacts/'+id).success(function(response){})
+
+  $scope.removeContact = function(){
+    $http.delete('/api/contacts/'+$scope.del_modal_id).success(function(response){})
     .success(function (response) {
-      var index = _.findIndex($scope.contacts, function(contact) { return contact._id == id })
+      var index = _.findIndex($scope.contacts, function(contact) { return contact._id == $scope.del_modal_id })
       $scope.contacts.splice(index, 1);
+      $('#del_Modal').modal('hide');
+      $('body').removeClass('modal-open');
+      $('.modal-backdrop').remove();
       window.location.href='#/';
     });
   }

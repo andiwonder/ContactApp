@@ -9,17 +9,14 @@
     </script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js">
     </script>
+    <script type="text/javascript" src="http://underscorejs.org/underscore.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.js">
     </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular-route.js">
     </script>
     <script src="http://code.angularjs.org/1.5.5/angular-animate.min.js">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap.js">
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js">
-    </script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.3.0/ui-bootstrap-tpls.min.js">
     </script>
 
     <script src="app.js">
@@ -31,7 +28,8 @@
 
     <script src="https://www.atlasestateagents.co.uk/javascript/tether.min.js">
     </script><!-- Tether for Bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous"> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous">
     </script>
 
@@ -46,17 +44,6 @@
     </style>
   </head>
   <body ng-app="contactApp" >
-    <div class="row nav__div">
-      <a href="#/contacts/add" class="btn btn-success btn-lg">Add Contact</a>
-      <div class="nav__arr col-sm-4 col-md-4 col-lg-4">
-        <i class="fa fa-arrow-left fa-5" aria-hidden="true"></i>
-        <h3>prev page</h3>
-      </div>
-      <div class="nav__arr col-sm-4 col-md-4 col-lg-4">
-        <h3>next page</h3>
-        <i class="fa fa-arrow-right fa-5" aria-hidden="true"></i>    
-      </div>
-    </div>
     <div class="card-deck-wrapper" ng-controller="contactsController">
       <div ng-view></div>
     </div>
