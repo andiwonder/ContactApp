@@ -71,9 +71,14 @@ app.post('/api/contacts', function(req, res){
 app.put('/api/contacts/:id', function(req, res){
   var id = req.params.id;
   var contact = req.body;
+  // console.log("put request made with id " + id);
+  // console.log(req.body);
   Contact.updateContact(id, contact, {}, function(err, contact){
     if(err){ throw err; }
-    res.json(contact);
+    // console.log("put request made callback");
+    // console.log(req.body);
+    // console.log(contact);
+    res.json(req.body);
   });
 });
 

@@ -43,17 +43,20 @@ module.exports.addContact = function(contact, callback){
   Contact.create(contact, callback);
 }
 
-module.exports.updateContact = function(id, contact_edit, options, callback){
+module.exports.updateContact = function(id, contact, options, callback){
   var query = {_id: id};
   var update = {
-    first_name : contact_edit.first_name,
-    last_name : contact_edit.last_name,
-    email: contact_edit.email,
-    dob: contact_edit.dob,
-    phone: contact_edit.phone,
-    img_url: contact_edit.img_url
+    first_name : contact.first_name,
+    last_name : contact.last_name,
+    email: contact.email,
+    dob: contact.dob,
+    phone: contact.phone,
+    img_url: contact.img_url
   }
-  Contact.findOneAndUpdate(query._id, update, options, callback);
+  // console.log("UPDATED NEW SHIT IS");
+  // console.log(update);
+  Contact.findOneAndUpdate({_id:id}, update, options, callback);
+  // Contact.findOneAndUpdate(query._id, update, options, callback);
 }
 
 module.exports.removeContact = function(id, callback){

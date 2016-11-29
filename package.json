@@ -9,7 +9,7 @@
   "dependencies":{
     "express":"*",
     "querystring":"*",
-    "cookie-paerser":"*",
+    "cookie-parser":"*",
     "body-parser":"*",
     "mongoose":"*",
     "request":"*",
