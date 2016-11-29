@@ -27,7 +27,10 @@ var contactSchema = mongoose.Schema({
   },
   comment : {
     type : String
-  }
+  },
+  groups :[{
+    type: String
+  }]
 });
 
 var Contact = module.exports = mongoose.model('Contact', contactSchema);

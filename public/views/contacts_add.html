@@ -14,7 +14,7 @@
       <div class="form-group col-lg-12">
         <label>Email</label>
         <input type="email" name="email" class="form-control" ng-model="contact.email" required>
-        <p ng-show="contact.email.$invalid && !contact.email.$pristine" class="help-block">Enter a valid email.</p>
+        <!-- <p ng-show="contact.email.$invalid" class="help-block">Enter a valid email.</p> -->
       </div>
     </div>
     <div class="row">
@@ -25,7 +25,9 @@
       </div>
       <div class="form-group col-lg-6">
         <label>Phone (xxx-xxx-xxxx) </label>
-        <input type="text" class="form-control" ng-model="contact.phone">
+        <input type="text" class="form-control" ng-model="contact.phone" >
+        <!-- ng-pattern="ph_numbr" -->
+        <!-- <p ng-message="pattern">Phone number is invalid.</p> -->
       </div>
     </div>
     <div class="row">
@@ -43,13 +45,20 @@
     <div class="row">
       <div class="form-group col-lg-12">
         <label>Genre</label>
-        <select ng-model="contact.groups" class="form-control" ng-model="add_contact_groups" ng-change="addGroup()">
+        <select id="addcontact_form_select" ng-model="contact.groups" class="form-control" ng-change="addGroup()">
           <option value="Family">Family</option>
           <option value="Friends">Friends</option>
           <option value="Work">Work</option>
           <option value="School">School</option>
           <option value="Other">Other</option>
         </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-lg-12">
+        
+        <li class="add_contact_group_display" ng-repeat="group in selected_groups">{{ group }} <button type="button" class="btn btn-danger btn-xs" ng-click="removeGroup(group)">remove</button></li>
+
       </div>
     </div>
     <div class="row">

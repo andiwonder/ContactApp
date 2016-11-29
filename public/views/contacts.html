@@ -4,7 +4,7 @@
       <ul uib-pagination direction-links="true" total-items="contacts.length" ng-model="currentPage"  items-per-page="pageSize"></ul>
     </div>
     <div class="col-lg-4">
-      <a href="#/contacts/add" class="btn btn-success btn-lg add_contact_btn">Add Contact</a>    
+      <a href="#/contacts/add" ng-click="emptyGroups()" class="btn btn-success btn-lg add_contact_btn">Add Contact</a>    
     </div>
   </div>
 </div>

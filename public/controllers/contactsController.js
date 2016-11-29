@@ -4,6 +4,23 @@ app.controller('contactsController',
   $scope.currentPage = 1;
   $scope.del_modal_id;
   $scope.add_contact_groups = [];
+  var new_groups = [];
+  $scope.selected_groups = [];
+  $scope.ph_numbr = /^(\+?(\d{1}|\d{2}|\d{3})[- ]?)?\d{3}[- ]?\d{3}[- ]?\d{4}$/;
+  $scope.groups = ["family","friends","work","school","church"];
+  var removeValue = function(array, id) {
+    return _.reject(array, function(item) {
+      return item === id; // or some complex logic
+    });
+  };
+
+  $scope.emptyGroups = function(){
+    new_groups = [];
+  }
+
+  $scope.removeGroup = function(group){
+    
+  }
 
   $scope.del_id = function(contact_id){
     $scope.del_modal_id = contact_id;
@@ -17,7 +34,9 @@ app.controller('contactsController',
   };
 
   $scope.addGroup = function (){
-    
+    new_groups.push($( "#addcontact_form_select option:selected" ).text());
+    $scope.selected_groups = new_groups
+    console.log($scope.selected_groups);
   }
 
   $scope.getContacts = function(){
@@ -35,7 +54,6 @@ app.controller('contactsController',
 
 
   $scope.addContact = function( contact){
-    debugger;
     $http({
       url: '/api/contacts/', method: "POST", data: $.param(contact),
       headers: {'Content-Type': 'application/x-www-form-urlencoded'}
