@@ -54,6 +54,7 @@ app.controller('contactsController',
     $('#myModal').modal('hide');
     $('body').removeClass('modal-open');
     $('.modal-backdrop').remove();
+    $('#ui-datepicker-div').remove()
     window.location.href='#/';
   };
 

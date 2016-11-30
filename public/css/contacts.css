@@ -15,9 +15,24 @@ body {
 
 }
 
+.info_display {
+  
+}
+
+.contact_info > h4 , .contact_info > h6 {
+  display: inline-block;
+}
+
+.contact_info > h4 {
+  margin-left: 6%;
+}
+
 @media screen and (min-width: 768px) {
   .group-nav-div{
     margin: 4% 0 0 0;    
+  }
+  .info_display {
+    padding-left: 0;
   }
 }
 
@@ -26,7 +41,7 @@ body {
 }
 
 .card-title {
-
+  margin-top: 0;
 }
 
 
@@ -67,7 +82,7 @@ body {
 
 .contact__card {
   padding-top: 10px;
-  margin: 3.25% 5.75%;
+  margin: 3.25% 0%;
   padding-bottom: 10px;
   padding-left: 0;
   padding-right: 0;
@@ -105,8 +120,10 @@ body {
   font-size: 1em;
 }
 .contact__card img {
-  max-width: 60%;
+  max-width: 100%;
 }
+
+
 
 .contacts__add__form {
   margin: 5% auto !important;
